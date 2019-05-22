@@ -1,4 +1,4 @@
-# How to: Customize the Integrated Bar command UI
+# How to: Customize the PDF Viewer's Integrated Bar command UI
 
 This code sample project shows how to customize the integrated Bar command UI of the PDF Viewer.
 
