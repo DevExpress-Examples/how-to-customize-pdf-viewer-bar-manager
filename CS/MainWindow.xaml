@@ -1,0 +1,52 @@
+<dx:ThemedWindow
+    x:Class="WpfApp1.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxpdf="http://schemas.devexpress.com/winfx/2008/xaml/pdf"
+    xmlns:local="clr-namespace:WpfApp1"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="PDF Viewer"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid>
+        <dxpdf:PdfViewerControl
+            x:Name="pdfViewer"
+            CommandBarStyle="Bars"
+            DocumentSource="Demo.pdf"
+            ShowStartScreen="True"
+            ZoomFactor="0.6">
+            <dxpdf:PdfViewerControl.CommandProvider>
+                <dxpdf:PdfCommandProvider>
+                    <!--  Access the collection of bar manager actions  -->
+                    <dxpdf:PdfCommandProvider.Actions>
+                        <!--  Disable Bar Manager Customization from the context menu  -->
+                        <dxb:UpdateAction
+                            ElementName="{x:Static dxpdf:DefaultPdfBarManagerItemNames.Bar}"
+                            PropertyName="AllowQuickCustomization"
+                            Value="false" />
+                        <!--  Remove the SaveAs item  -->
+                        <dxb:RemoveAction ElementName="{x:Static dxpdf:DefaultPdfBarManagerItemNames.SaveAs}" />
+                        <!--  Change the caption and the icon of the Close bar item  -->
+                        <dxb:ReplaceAction ElementName="{x:Static dxpdf:DefaultPdfBarManagerItemNames.Close}">
+                            <dxb:BarButtonItem
+                                Command="{Binding ElementName=pdfViewer, Path=CloseDocumentCommand}"
+                                Content="Exit"
+                                Glyph="{dx:DXImage 'Office2013/Actions/Close_32x32.png'}" />
+                        </dxb:ReplaceAction>
+                        <!--  Create a new bar item  -->
+                        <dxb:InsertAction ContainerName="{x:Static dxpdf:DefaultPdfBarManagerItemNames.Bar}" Index="1">
+                            <dxb:BarButtonItem
+                                Command="{Binding ElementName=pdfViewer, Path=SaveAsCommand}"
+                                Content="Save As"
+                                Glyph="{dx:DXImage 'Office2013/Save/SaveAs_32x32.png'}" />
+                        </dxb:InsertAction>
+                    </dxpdf:PdfCommandProvider.Actions>
+                </dxpdf:PdfCommandProvider>
+            </dxpdf:PdfViewerControl.CommandProvider>
+        </dxpdf:PdfViewerControl>
+    </Grid>
+</dx:ThemedWindow>
