@@ -9,6 +9,8 @@
 
 This example customizes the integrated Bar commands.
 
+![image](https://github.com/user-attachments/assets/7e62f802-b619-4205-913b-12a7eaeb7ef0)
+
 Use [bar customization actions](https://docs.devexpress.com/WPF/7045/controls-and-libraries/ribbon,-bars-and-menu/bars/bar-actions) to add, modify or remove elements. This code sample shows how to customize the Bar Manager's and bar item's properties, how to remove bar items and how to create new items.
 
 <!-- default file list -->
