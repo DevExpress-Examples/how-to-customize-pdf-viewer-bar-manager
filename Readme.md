@@ -15,7 +15,7 @@ Use [bar customization actions](https://docs.devexpress.com/WPF/7045/controls-an
 
 Refer to the [How to customize the Integrated PDF Viewer Ribbon](https://github.com/DevExpress-Examples/how-to-customize-pdf-viewer-toolbar-items-e5091) repository for a n example on how to customize the integrated Ribbon command UI.
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-pdf-viewer-customize-bar-manager&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-pdf-viewer-customize-bar-manager&~~~was_helpful=no)
 
